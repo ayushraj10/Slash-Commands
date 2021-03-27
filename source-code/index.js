@@ -1,17 +1,18 @@
 const discord = require(`discord.js`);const discord = require('discord.js');
 const client = new discord.Client();
+const GUILDID =('TYPE YOUR GUILD ID HERE')
 
 client.on('ready', () => {
     console.log('ready');
 
-    client.api.applications(client.user.id).guilds('699722023508770836').commands.post({
+    client.api.applications(client.user.id).guilds('GUILDID').commands.post({
         data: {
             name: "hello",
             description: "Replies with Hello World!"
         }
     });
 
-    client.api.applications(client.user.id).guilds('699722023508770836').commands.post({
+    client.api.applications(client.user.id).guilds('GUILDID').commands.post({
         data: {
             name: "echo",
             description: "Echos your text as an embed!",
